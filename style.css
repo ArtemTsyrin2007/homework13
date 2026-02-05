@@ -1,18 +1,56 @@
 .figures-container {
   max-width: 1120px;
-  width: calc(50vw-560px);
+  width: calc(100%-300px);
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   align-content: center;
   justify-content: space-between;
   background-color: bisque;
+  padding: 20px;
+  position: relative;
 }
-@keyframes Move {
+
+.ellipse-container {
+  animation: moveEllipse 4s ease-in-out infinite;
+  position: relative;
+}
+
+.ellipse-animated {
+  animation: changeEllipseColor 3s linear infinite;
+}
+
+@keyframes moveEllipse {
   0% {
     left: 0;
   }
+  50% {
+    left: calc(100% - 300px);
+  }
   100% {
-    left: 1000px;
+    left: 0;
+  }
+}
+
+@keyframes changeEllipseColor {
+  0% {
+    fill: #a8dadc;
+    stroke: #457b9d;
+  }
+  25% {
+    fill: #ff6b6b;
+    stroke: #c92a2a;
+  }
+  50% {
+    fill: #4ecdc4;
+    stroke: #0a8f85;
+  }
+  75% {
+    fill: #ffe66d;
+    stroke: #f4a700;
+  }
+  100% {
+    fill: #a8dadc;
+    stroke: #457b9d;
   }
 }
