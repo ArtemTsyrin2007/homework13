@@ -1,0 +1,18 @@
+.figures-container {
+  max-width: 1120px;
+  width: calc(50vw-560px);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-content: center;
+  justify-content: space-between;
+  background-color: bisque;
+}
+@keyframes Move {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 1000px;
+  }
+}
